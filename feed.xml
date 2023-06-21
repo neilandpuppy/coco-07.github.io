@@ -1,5 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-21T18:45:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">coco07</title><subtitle>Welcome to Coco07&apos;s blog! Let&apos;s explore the world of programming and technology together through learning, reflection, and sharing.
-</subtitle><author><name>coco07</name></author><entry><title type="html">Hello World</title><link href="http://localhost:4000/2023/06/21/hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2023-06-21T00:00:00+08:00</published><updated>2023-06-21T00:00:00+08:00</updated><id>http://localhost:4000/2023/06/21/hello-world</id><content type="html" xml:base="http://localhost:4000/2023/06/21/hello-world.html"><![CDATA[<p>这是一篇测试文章</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-21T20:48:02+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">coco07</title><subtitle>Welcome to Coco07&apos;s blog! Let&apos;s explore the world of programming and technology together through learning, reflection, and sharing.
+</subtitle><author><name>coco07</name></author><entry><title type="html">记录使用Jekyll搭建Github pages博客</title><link href="http://localhost:4000/2023/06/21/1-build-website.html" rel="alternate" type="text/html" title="记录使用Jekyll搭建Github pages博客" /><published>2023-06-21T00:00:00+08:00</published><updated>2023-06-21T00:00:00+08:00</updated><id>http://localhost:4000/2023/06/21/1-build-website</id><content type="html" xml:base="http://localhost:4000/2023/06/21/1-build-website.html"><![CDATA[<h2 id="前言">前言</h2>
+
+<p>GitHub Pages是GitHub提供的一项服务，它允许用户免费创建和托管静态网站。由于Typecho和Wordpress这样的动态网站生成器依赖于php这样的服务器端脚本语言，所以并不适用。然而我们可以使用Jekyll在本地计算机上生成静态网页文件，然后将这些文件上传到GitHub服务器。
+本文记录了如何在Github Pages上搭建个人博客。</p>
+
+<h2 id="在windows上安装jekyll和bundler">在Windows上安装Jekyll和Bundler</h2>
+
+<p>详情参考 https://jekyllrb.com/docs/installation/windows/</p>
+
+<p>Jekyll是基于Ruby语言开发的，需要先安装Ruby语言环境。从https://rubyinstaller.org/downloads/ 下载Ruby+Devkit版本，使用默认选项安装。</p>
+
+<p>安装完成后，在cmd中使用<code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code>安装Bundler（Ruby程序依赖项的版本管理器）</p>
+
+<h2 id="本地生成博客网站">本地生成博客网站</h2>
+
+<p>使用<code class="language-plaintext highlighter-rouge">jekyll new myblog</code>命令创建一个名叫myblog的文件夹，此时<code class="language-plaintext highlighter-rouge">cd myblog</code>切换到目录下，使用<code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>生成网站即可。打开浏览器，输入<code class="language-plaintext highlighter-rouge">localhost:4000</code>就能看到我们的网站啦！</p>
+
+<p>在myblog文件夹里，_config.yml储存了网站的配置信息，_port文件夹储存markdown文章，_site文件夹储存的就是生成的网站本体。此时我们的网站还在本地，我们需要将它上传到Github Page。</p>
+
+<h2 id="发布网站">发布网站</h2>
+
+<p>登录或注册Github，创建一个新的repository，仓库名字设为&lt;username&gt;.github.io（&lt;username&gt;是自己的Github用户名），然后将myblog\_site文件夹里的文件上传到仓库。</p>
+
+<p>在仓库的Settings-Pages-Branch里选择从main /root构建。可能需要等待一会，就能在&lt;username&gt;.github.io上看到自己的网站了。</p>
+
+<h2 id="设置主题">设置主题</h2>
+
+<p>到http://jekyllthemes.org/ 选择喜欢的主题。要注意有的主题可能会有较多报错，需要自行解决。我使用的是https://github.com/bitbrain/jekyll-dash 主题。</p>
+
+<p>安装主题最简单的方法就是在Github页面上Download ZIP下载到本地。一顿操作之后，跟上面的一样，<code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>（其实这里作者也没弄明白，可能会出现版本不兼容的问题，就按提示安装指定版本，再不济就把报错信息喂给ChatGPT），然后上传到仓库。</p>
+
+<h2 id="其他">其他</h2>
+
+<h3 id="域名解析">域名解析</h3>
+
+<p>有域名的小伙伴可以把DNS的记录类型设为CNAME，记录值&lt;username&gt;.github.io。然后在仓库的Settings-Pages-Custom domain里设为自己的域名。此时已经可以从自己的域名访问网站。</p>
+
+<h3 id="上传文章">上传文章</h3>
+
+<p>更多网站配置在_config.yml里更改（如站名，介绍等），发布文章需要在本地_port文件夹里创建符合YYY-MM-DD-title.md命名规则的文件。文件里面要有一个文件头，格式像下面这样：</p>
+
+<p>-–
+layout: post
+title:  “Hello World”
+tags: others 
+-–</p>
+
+<p>本地重新生成网站后上传到Github就能更新文章了。</p>
+
+<h2 id="结语">结语</h2>
+
+<p>以上仅代表作者折腾了大半天后的经验，对于小白来讲肯定还会有很多地方需要自己摸索。本文是coco07’s blog的第二篇文章，欢迎在评论区讨论</p>]]></content><author><name>coco07</name></author><category term="IT" /><category term="web" /><summary type="html"><![CDATA[在Github上搭建免费的静态网站]]></summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2023/06/21/0-hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2023-06-21T00:00:00+08:00</published><updated>2023-06-21T00:00:00+08:00</updated><id>http://localhost:4000/2023/06/21/0-hello-world</id><content type="html" xml:base="http://localhost:4000/2023/06/21/0-hello-world.html"><![CDATA[<p>21年曾经使用Typecho在云服务器上搭建了自己的博客，一眨眼两年过去了，当年网站上的文章也没有存档。2年里许多事情改变了，现在重新捡起编程，希望那颗初心不要变质吧。</p>
+
+<p>这是一个在<a href="https://pages.github.com/">Github Pages</a>上用<a href="https://jekyllrb.com/">Jekyll</a>搭建的博客。</p>
+
+<p>这是一篇测试文章。</p>
 
 <div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">format</span> <span class="no">t</span> <span class="s">"hello world~%"</span><span class="p">)</span>
 </code></pre></div></div>]]></content><author><name>coco07</name></author><category term="others" /><summary type="html"><![CDATA[hello world]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-04-16T00:00:00+08:00</published><updated>2019-04-16T00:00:00+08:00</updated><id>http://localhost:4000/2019/04/16/welcome-to-jekyll2</id><content type="html" xml:base="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>

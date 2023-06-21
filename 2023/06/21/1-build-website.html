@@ -3,22 +3,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Welcome to Jekyll! | coco07</title>
+<title>记录使用Jekyll搭建Github pages博客 | coco07</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Welcome to Jekyll!" />
+<meta property="og:title" content="记录使用Jekyll搭建Github pages博客" />
 <meta name="author" content="coco07" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="this article explains something and gives a brief introduction." />
-<meta property="og:description" content="this article explains something and gives a brief introduction." />
-<link rel="canonical" href="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html" />
-<meta property="og:url" content="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html" />
+<meta name="description" content="在Github上搭建免费的静态网站" />
+<meta property="og:description" content="在Github上搭建免费的静态网站" />
+<link rel="canonical" href="http://localhost:4000/2023/06/21/1-build-website.html" />
+<meta property="og:url" content="http://localhost:4000/2023/06/21/1-build-website.html" />
 <meta property="og:site_name" content="coco07" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-04-16T00:00:00+08:00" />
+<meta property="article:published_time" content="2023-06-21T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Welcome to Jekyll!" />
+<meta property="twitter:title" content="记录使用Jekyll搭建Github pages博客" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"coco07"},"dateModified":"2019-04-16T00:00:00+08:00","datePublished":"2019-04-16T00:00:00+08:00","description":"this article explains something and gives a brief introduction.","headline":"Welcome to Jekyll!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/04/16/welcome-to-jekyll2.html"},"url":"http://localhost:4000/2019/04/16/welcome-to-jekyll2.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"coco07"},"dateModified":"2023-06-21T00:00:00+08:00","datePublished":"2023-06-21T00:00:00+08:00","description":"在Github上搭建免费的静态网站","headline":"记录使用Jekyll搭建Github pages博客","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023/06/21/1-build-website.html"},"url":"http://localhost:4000/2023/06/21/1-build-website.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
@@ -53,81 +53,78 @@
 
 
 <div class="post">
-  <h1 class="post-title">Welcome to Jekyll!</h1>
+  <h1 class="post-title">记录使用Jekyll搭建Github pages博客</h1>
   
   <div class="post-tags">
       
-      <a class="tag" href="/tag/welcome/">welcome</a>
+      <a class="tag" href="/tag/it/">IT</a>
       
-      <a class="tag" href="/tag/introduction/">introduction</a>
+      <a class="tag" href="/tag/web/">web</a>
       
   </div>
   
   <div class="post-date">
-    Published on 16 Apr 2019
+    Published on 21 Jun 2023
     
   </div>
   
   <noscript>
-    <div class="post-description">this article explains something and gives a brief introduction.</div>
+    <div class="post-description">在Github上搭建免费的静态网站</div>
   </noscript>
   <div id="animated-post-description" class="post-description" style="display: none;"></div>
   
-  <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+  <h2 id="前言">前言</h2>
 
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>GitHub Pages是GitHub提供的一项服务，它允许用户免费创建和托管静态网站。由于Typecho和Wordpress这样的动态网站生成器依赖于php这样的服务器端脚本语言，所以并不适用。然而我们可以使用Jekyll在本地计算机上生成静态网页文件，然后将这些文件上传到GitHub服务器。
+本文记录了如何在Github Pages上搭建个人博客。</p>
 
-<blockquote>
-  <p>“This is a quote which should be followed”
-Also I think this sentence is quite long.
-more quote text to come</p>
-  <ul>
-    <li>Chris Wayne</li>
-  </ul>
-</blockquote>
+<h2 id="在windows上安装jekyll和bundler">在Windows上安装Jekyll和Bundler</h2>
 
-<blockquote>
-  <p>Single line quote</p>
-</blockquote>
+<p>详情参考 https://jekyllrb.com/docs/installation/windows/</p>
 
-<p>However, these are bulletpoints:</p>
+<p>Jekyll是基于Ruby语言开发的，需要先安装Ruby语言环境。从https://rubyinstaller.org/downloads/ 下载Ruby+Devkit版本，使用默认选项安装。</p>
 
-<ul>
-  <li>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</li>
-  <li>another point</li>
-  <li>that’s it</li>
-</ul>
+<p>安装完成后，在cmd中使用<code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code>安装Bundler（Ruby程序依赖项的版本管理器）</p>
 
-<p>However, these entries should not be styled:</p>
+<h2 id="本地生成博客网站">本地生成博客网站</h2>
 
-<ol>
-  <li>an entry</li>
-  <li>another entry</li>
-  <li>that’s another entry</li>
-</ol>
+<p>使用<code class="language-plaintext highlighter-rouge">jekyll new myblog</code>命令创建一个名叫myblog的文件夹，此时<code class="language-plaintext highlighter-rouge">cd myblog</code>切换到目录下，使用<code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>生成网站即可。打开浏览器，输入<code class="language-plaintext highlighter-rouge">localhost:4000</code>就能看到我们的网站啦！</p>
 
-<video preload="auto" poster="https://pbs.twimg.com/tweet_video_thumb/D5aj3tfW0AIiSxo.jpg" src="https://video.twimg.com/tweet_video/D5aj3tfW0AIiSxo.mp4" type="video/mp4" autoplay="" controls=""></video>
+<p>在myblog文件夹里，_config.yml储存了网站的配置信息，_port文件夹储存markdown文章，_site文件夹储存的就是生成的网站本体。此时我们的网站还在本地，我们需要将它上传到Github Page。</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h2 id="发布网站">发布网站</h2>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
-</code></pre></div></div>
+<p>登录或注册Github，创建一个新的repository，仓库名字设为&lt;username&gt;.github.io（&lt;username&gt;是自己的Github用户名），然后将myblog\_site文件夹里的文件上传到仓库。</p>
 
-<h1 id="an-interesting-fact-on-the-economy-of-modern-america">An interesting fact on the economy of modern America</h1>
+<p>在仓库的Settings-Pages-Branch里选择从main /root构建。可能需要等待一会，就能在&lt;username&gt;.github.io上看到自己的网站了。</p>
 
-<p>Pictures look like this:</p>
+<h2 id="设置主题">设置主题</h2>
 
-<p><img src="https://picsum.photos/200" alt="image" class="modal" /></p>
+<p>到http://jekyllthemes.org/ 选择喜欢的主题。要注意有的主题可能会有较多报错，需要自行解决。我使用的是https://github.com/bitbrain/jekyll-dash 主题。</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>安装主题最简单的方法就是在Github页面上Download ZIP下载到本地。一顿操作之后，跟上面的一样，<code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>（其实这里作者也没弄明白，可能会出现版本不兼容的问题，就按提示安装指定版本，再不济就把报错信息喂给ChatGPT），然后上传到仓库。</p>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/jekyll?src=hash&amp;ref_src=twsrc%5Etfw">#jekyll</a> <a href="https://twitter.com/hashtag/dash?src=hash&amp;ref_src=twsrc%5Etfw">#dash</a> now officially supports both, dark and light theming. Enjoy!<a href="https://t.co/4evp9pX2Ws">https://t.co/4evp9pX2Ws</a> <a href="https://t.co/vOQCZjGKic">pic.twitter.com/vOQCZjGKic</a></p>&mdash; 〽️ɪɢᴜᴇʟ (@bitbrain_) <a href="https://twitter.com/bitbrain_/status/1166440978124877827?ref_src=twsrc%5Etfw">August 27, 2019</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h2 id="其他">其他</h2>
 
+<h3 id="域名解析">域名解析</h3>
+
+<p>有域名的小伙伴可以把DNS的记录类型设为CNAME，记录值&lt;username&gt;.github.io。然后在仓库的Settings-Pages-Custom domain里设为自己的域名。此时已经可以从自己的域名访问网站。</p>
+
+<h3 id="上传文章">上传文章</h3>
+
+<p>更多网站配置在_config.yml里更改（如站名，介绍等），发布文章需要在本地_port文件夹里创建符合YYY-MM-DD-title.md命名规则的文件。文件里面要有一个文件头，格式像下面这样：</p>
+
+<p>-–
+layout: post
+title:  “Hello World”
+tags: others 
+-–</p>
+
+<p>本地重新生成网站后上传到Github就能更新文章了。</p>
+
+<h2 id="结语">结语</h2>
+
+<p>以上仅代表作者折腾了大半天后的经验，对于小白来讲肯定还会有很多地方需要自己摸索。本文是coco07’s blog的第二篇文章，欢迎在评论区讨论</p>
 
 </div>
 
@@ -136,9 +133,9 @@ more quote text to come</p>
 <div id="disqus_thread"></div>
 <script>
  var disqus_config = function () {
-     this.page.url = 'http://localhost:4000/2019/04/16/welcome-to-jekyll2.html';
-     this.page.identifier = '/2019/04/16/welcome-to-jekyll2';
-     this.page.title = 'Welcome to Jekyll!';
+     this.page.url = 'http://localhost:4000/2023/06/21/1-build-website.html';
+     this.page.identifier = '/2023/06/21/1-build-website';
+     this.page.title = '记录使用Jekyll搭建Github pages博客';
  };
 
  (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
@@ -163,16 +160,16 @@ more quote text to come</p>
     
       <li>
         <h3>
-          <a href="/2023/06/21/1-build-website.html">
-            记录使用Jekyll搭建Github pages博客
+          <a href="/2023/06/21/0-hello-world.html">
+            Hello World
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/2023/06/21/0-hello-world.html">
-            Hello World
+          <a href="/2019/04/16/welcome-to-jekyll2.html">
+            Welcome to Jekyll!
           </a>
         </h3>
       </li>
@@ -193,7 +190,7 @@ more quote text to come</p>
 
 <script>
   let i = 0;
-  const text = 'this article explains something and gives a brief introduction.';
+  const text = '在Github上搭建免费的静态网站';
   const speed = parseInt('50');
   
   function typeWriter() {
